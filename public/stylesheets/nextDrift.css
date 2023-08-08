@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi&display=swap');
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    font-family: 'Kosugi', sans-serif;
+}
+
+.header {grid-area: head}
+.navbar {grid-area: nav}
+.maincontainer {grid-area: main}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'head'
+    'nav'
+    'main';
+    grid-template-rows: 100px 55px;
+}
+
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bodytext{
+    font-size: 1.25em;
+}
+
+.maintitle {
+    color: red;
+    font-size: 3.5em;
+    font-style: italic;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.navbuttons {
+    text-align: center;
+    padding-left: 50px;
+    font-size: 1.25em;
+}
+
+.navlink {
+    padding-right: 50px;
+}
+
+.mainpagecontent {
+    text-align: center;
+}
+
+.eventpagecontent {
+    position: absolute;
+    left: 30%;
+    text-align: left;
+}
+
+
+.create {
+    font-size: 2em;
+}
