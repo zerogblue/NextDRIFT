@@ -17,8 +17,8 @@
             </div>
             <div class="maincontainer">
                 <div class="mainpagecontent">
-                    <span class="create">Welcome to NextDRIFT.</span>
-                    <p><span class="bodytext">Please select either "Create Event" or "View Events" to continue.</p>
+                    <span class="create">Event Name Here</span>
+                    <p><span class="bodytext">Event Info goes here</p>
                 </div>
             </div>
         </div>

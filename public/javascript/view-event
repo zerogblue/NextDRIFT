@@ -1,0 +1,33 @@
+
+function createEventElement(response, container) {
+    var wrapper = document.createElement("div");
+    wrapper.classList.add("event");
+
+    var title = document.createElement("h1");
+    title.innerHTML = response.name;
+    wrapper.appendChild(title);
+
+    var description = document.createElement("p");
+    description.innerHTML = response.location;
+    wrapper.appendChild(description);
+
+    container.appendChild(wrapper);
+}
+
+const eventContainer = document.getElementById("eventContainer");
+
+async function bigFetch() {
+    fetch("/api/getAll")
+    .then(async (response) => {
+        var events = await response.json();
+        console.log(events)
+        for(var event of events) {
+            createEventElement(event, eventContainer);
+        }
+    })
+    .catch((e) => {
+        console.error("Could not fetch events", e);
+    })
+}
+
+bigFetch();

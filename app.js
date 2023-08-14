@@ -29,12 +29,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/main.html'))
 })
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/event.html'))
+})
+
 app.get('/create-events', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/create-event.html'))
 })
 
-app.get('/events', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/events.html'))
+app.get('/view-events', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/view-events.html'))
 })
 
 app.use(express.json());
