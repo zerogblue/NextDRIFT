@@ -11,6 +11,11 @@ function createEventElement(response, container) {
     description.innerHTML = response.location;
     wrapper.appendChild(description);
 
+    var link = document.createElement("a");
+    link.href = "http://localhost:3000/event?event_id=" + response._id;
+    link.innerHTML = "<span style='font-style:italic;'>View more</a>";
+    wrapper.appendChild(link);
+
     container.appendChild(wrapper);
 }
 

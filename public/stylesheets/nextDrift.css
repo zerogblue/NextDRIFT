@@ -19,7 +19,7 @@ html * {
     'head'
     'nav'
     'main';
-    grid-template-rows: 100px 55px;
+    grid-template-rows: 100px 50px;
 }
 
 a:link, a:visited {

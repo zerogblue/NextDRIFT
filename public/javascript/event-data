@@ -1,0 +1,28 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const eventID = urlParams.get('event_id');
+
+var eventName = document.querySelector(".create");
+var eventLocation = document.querySelector(".eventlocation");
+
+async function dataDisplay() {
+    fetch("/api/getOne/"+eventID)
+    .then(async (response) => {
+        
+        var eventData = await response.json();
+        
+        var name = "";
+        name+=`<p>${eventData.name}</p>`;
+        eventName.innerHTML+=name;
+
+        var location = "";
+        location+=`<p>${eventData.location}</p>`;
+        eventLocation.innerHTML+=location;
+    })
+    .catch((e) => {
+        console.error("Could not fetch eventData", e);
+    })
+}
+
+dataDisplay();

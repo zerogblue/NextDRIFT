@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/main.html'))
 })
 
-app.get('/', (req, res) => {
+app.get('/event', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/event.html'))
 })
 
