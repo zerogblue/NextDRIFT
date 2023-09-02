@@ -8,27 +8,52 @@
     </head>
 
     <body>
-        <div class="grid-container">
-            <div class="headercontainer">
-                <div class="maintitle"><a href="/">NextDRIFT</a></div>
-            </div>
-            <div class="navbar">
-                <div class="navbuttons"><span class="navlink"><a href="/create-events">Create Event</a></span><span class="navlink"><a href="/view-events">View Events</a></span></div>
-            </div>
-            <div class="maincontainer">
-                <div class="mainpagecontent">
+        <div class="page-container">
+            <section class="headercontainer">
+                <div class="titlebox">
+                    <a href="/"><span class="maintitle">NextDRIFT</span></a>
+                </div>
+                <div class="navbuttons">
+                    <span class="navlink"><a href="/create-events">Plan Events</a></span><span class="navlink"><a href="/view-events">View Events</a></span><span class="navlink"></div><div class="about"><span class="abouttext"><a href="/">About</a></span>
+                </div>
+            </section>
+
+            <section class="maincontainer">
+                <div class="pagecontent">
                     <span class="create">Create an event:</span><br><br>
                     
                     <form action="/api/post" target="_self" method="post">
                         <label for="name">Name:</label><br>
                         <input type="text" id="name" name="name"><br>
                         <label for="location">Location:</label><br>
-                        <input type="text" id="location" name="location"><br><br>
+                        <input type="text" id="location" name="location"><br>
+                        <label for="date">Date:</label><br>
+                        <input type="text" id="date" name="date"><br>
+                        <label for="description">Description:</label><br>
+                        <input type="text" id="description" name="description"><br>
                         <input type="submit" value="Create">
-                      </form>
+                    </form>
 
                 </div>
-            </div>
+            </section>
+
+            <section class="footercontainer">
+                <div class="footer">
+                    <div class="footerflex">
+                        <div class="footerbox">
+                            <h class="footerheading">Contact</h>
+                            <p>jbalouch@outlook.com</p>
+                            <p>610-818-9621</p>
+                        </div>
+                        <div class="footerbox box2pos">
+                            <h class="footerheading">Socials</h>
+                            <p><a href="https://github.com/zerogblue">Github</a></p>
+                            <p><a href="https://www.linkedin.com/in/jbalouch/">Linkedin</a></p>
+                        </div>
+                    </div>
+                    <div class="farewell"><h class="bye">Thank you for visiting.</h></div>
+                </div>
+            </section>
         </div>
     </body>
 </html>

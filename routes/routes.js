@@ -11,7 +11,9 @@ router.post('/post', async (req, res) => {
 
     const data = new Model({
         name: req.body.name,
-        location: req.body.location
+        location: req.body.location,
+        date: req.body.date,
+        description: req.body.description
     })
 
     try {

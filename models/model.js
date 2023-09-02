@@ -5,7 +5,18 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String
     },
+
     location: {
+        required: true,
+        type: String
+    },
+
+    date: {
+        required: true,
+        type: Date
+    },
+
+    description: {
         required: true,
         type: String
     }

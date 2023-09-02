@@ -5,6 +5,8 @@ const eventID = urlParams.get('event_id');
 
 var eventName = document.querySelector(".create");
 var eventLocation = document.querySelector(".eventlocation");
+var eventDate = document.querySelector(".eventlocation");
+var eventDescription = document.querySelector(".eventlocation");
 
 async function dataDisplay() {
     fetch("/api/getOne/"+eventID)
@@ -19,6 +21,15 @@ async function dataDisplay() {
         var location = "";
         location+=`<p>${eventData.location}</p>`;
         eventLocation.innerHTML+=location;
+
+        var date = "";
+        date+=`<p>${eventData.date}</p>`;
+        eventDate.innerHTML+=date;
+
+        var description = "";
+        description+=`<p>${eventData.description}</p>`;
+        eventDescription.innerHTML+=description;
+
     })
     .catch((e) => {
         console.error("Could not fetch eventData", e);
