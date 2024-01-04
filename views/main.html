@@ -7,19 +7,39 @@
         <link rel="stylesheet" href="/stylesheets/nextDrift.css">
     </head>
 
+   
     <body>
-        <div class="page-container">
 
-            <section class="headercontainer">
+        <div class='slide'>
+
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <span class="spinner diagonal part-1"></span>
+                <span class="spinner horizontal"></span>
+                <span class="spinner diagonal part-2"></span>
+            </label>
+            <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                <li></li>
+                <li><a href="/create-events" target="_blank">Plan an Event</a></li>
+                <li><a href="/view-events">View Events</a></li>
+                <li><a href="/">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="page-container">
+            <div class="headercontainer">
                 <div class="titlebox">
                     <a href="/"><span class="maintitle">NextDRIFT</span></a>
                 </div>
                 <div class="navbuttons">
-                    <span class="navlink"><a href="/create-events">Plan Events</a></span><span class="navlink"><a href="/view-events">View Events</a></span><span class="navlink"></div><div class="about"><span class="abouttext"><a href="/">About</a></span>
+                    <span class="navlink"><a href="/create-events">Plan Events</a></span><span class="navlink"><a href="/view-events">View Events</a></span></div><div class="about"><span class="abouttext"><a href="/">About</a></span></div>
                 </div>
-            </section>
+            </div>
 
-            <section class="maincontainer">
+            <div class="maincontainer">
                 <div class="bannerpagecontent">
                     <div class="maintextbox mptext">
                         <h2 class="bannertitle">Welcome to <i>NextDRIFT</i>.</h2>
@@ -33,25 +53,23 @@
                         <div class="hfovalpos"><div class="hfoval"><p class="ovaltext"><a href="/create-events">Plan an event now</a></p></div></div>
                     </div>         
                 </div>
-            </section>
-            <section class="footercontainer">
+            </div>
+            <div class="footercontainer">
                 <div class="footer">
                     <div class="footerflex">
                         <div class="footerbox">
-                            <h class="footerheading">Contact</h>
+                            <h1 class="footerheading">Contact</h1>
                             <p>jbalouch@outlook.com</p>
                             <p>610-818-9621</p>
                         </div>
                         <div class="footerbox box2pos">
-                            <h class="footerheading">Socials</h>
+                            <h1 class="footerheading">Socials</h1>
                             <p><a href="https://github.com/zerogblue">Github</a></p>
                             <p><a href="https://www.linkedin.com/in/jbalouch/">Linkedin</a></p>
                         </div>
                     </div>
-                    <div class="farewell"><h class="bye">Thank you for visiting.</h></div>
                 </div>
-            </section>
+            </div>
 
-        </div>
     </body>
 </html>
