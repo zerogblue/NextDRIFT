@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 var path = require('path');
 const routes = require('./routes/routes');
+const router = require('./routes/routes');
 
 require('dotenv').config();
 
@@ -22,11 +23,17 @@ database.once('connected', () => {
 //
 
 const app = express();
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log('Server launched at ' + port)
+})
+
+
 app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/main.html'))
+    res.sendFile(path.join(__dirname, 'views/index.html'))
 })
 
 app.get('/event', (req, res) => {
@@ -44,7 +51,3 @@ app.get('/view-events', (req, res) => {
 app.use(express.json());
 app.use('/api', routes);
 
-
-app.listen(3000, () => {
-    console.log('Server launched at 3000')
-})
